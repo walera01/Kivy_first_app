@@ -1,0 +1,40 @@
+<Menu>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: root.top/10
+        spacing : 10
+        Button:
+            background_color: 1,0,1,1
+            text: "Play1"
+            on_press: root.manager.current="play1"
+        Button:
+            text:"Play2"
+            on_press: root.manager.current= "play1"
+        Button:
+            text: "Play3"
+            on_press: root.manager.current= "play1"
+        Button:
+            text: "Play4"
+            on_press: root.manager.current= "play1"
+<Play1>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: root.top/10
+        spacing : 10
+        Label:
+            text: "111111"
+
+        TextInput:
+            text: ""
+            input_type: 'number'
+        TextInput:
+            text: ""
+            input_type: 'number'
+        Widget:
+            size_hint: 1, 3
+        Button:
+            on_release: print("he")
+            size_hint:0.2,0.8
+            background_color: 0.50, 1, 0.30,1
+            text: "Exit menu"
+            on_press: root.manager.current = "menu"
